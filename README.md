@@ -32,14 +32,15 @@ Move the frog to the right on top of the lilypad.
 
 Notes
 
-<img src="https://user-images.githubusercontent.com/52146855/64952375-2cab8e00-d84e-11e9-9580-d3710b97ddf9.png" width="200" height="200" />
+<img src="https://user-images.githubusercontent.com/52146855/64952375-2cab8e00-d84e-11e9-9580-d3710b97ddf9.png" width="100" height="100" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="https://user-images.githubusercontent.com/52146855/64952375-2cab8e00-d84e-11e9-9580-d3710b97ddf9.png" width="200" height="200" />
+<img src="https://user-images.githubusercontent.com/52146855/64952375-2cab8e00-d84e-11e9-9580-d3710b97ddf9.png" width="100" height="100" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="https://user-images.githubusercontent.com/52146855/64952375-2cab8e00-d84e-11e9-9580-d3710b97ddf9.png" width="200" height="200" />
+<img src="https://user-images.githubusercontent.com/52146855/64952375-2cab8e00-d84e-11e9-9580-d3710b97ddf9.png" width="100" height="100" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="https://user-images.githubusercontent.com/52146855/64952375-2cab8e00-d84e-11e9-9580-d3710b97ddf9.png" width="200" height="200" />
+<img src="https://user-images.githubusercontent.com/52146855/64952375-2cab8e00-d84e-11e9-9580-d3710b97ddf9.png" width="100" height="100" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 
 
 
