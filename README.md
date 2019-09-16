@@ -16,11 +16,11 @@
 
 Move the frog to the right on top of the lilypad.
 
-<div style="text-align:center "><img src="https://user-images.githubusercontent.com/52146855/64952375-2cab8e00-d84e-11e9-9580-d3710b97ddf9.png" width="300" height="300" /></div>
+<img src="https://user-images.githubusercontent.com/52146855/64952375-2cab8e00-d84e-11e9-9580-d3710b97ddf9.png" width="300" height="300" />
 
 
 
-<details><summary> Solution</summary>
+<details open><summary> Solution</summary>
 
 ```css
 #pond {
@@ -31,6 +31,16 @@ Move the frog to the right on top of the lilypad.
 ```
 
 Notes
+
+<img src="https://user-images.githubusercontent.com/52146855/64952375-2cab8e00-d84e-11e9-9580-d3710b97ddf9.png" width="200" height="200" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://user-images.githubusercontent.com/52146855/64952375-2cab8e00-d84e-11e9-9580-d3710b97ddf9.png" width="200" height="200" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://user-images.githubusercontent.com/52146855/64952375-2cab8e00-d84e-11e9-9580-d3710b97ddf9.png" width="200" height="200" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://user-images.githubusercontent.com/52146855/64952375-2cab8e00-d84e-11e9-9580-d3710b97ddf9.png" width="200" height="200" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 
 
 </details>
