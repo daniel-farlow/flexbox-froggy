@@ -1,96 +1,112 @@
 # Flexbox Froggy
 
-[](#general-information)   
-## General Information 
+- [Contents](#contents): Jump here to go ahead and get started by looking at your desired level. 
+- [Flexbox properties and values](#flexbox-properties-and-values): Jump here to review some of the commonly used properties and values available when using the flexible box model in CSS.
+
+- **Note:** This "README" file is really a companion to the [levels](#contents) in [flexbox froggy](http://flexboxfroggy.com/), a website dedicated to helping newcomers to the flexible box model in CSS. As loosely stated on the website:
+
+    > Flexbox Froggy is a game where you help Froggy and friends reach their lilypads by writing CSS code using flexbox!
+
+    Certain properties and values of flexbox have been included below that may be useful to reference throughout completing the exercises if needed. Good luck!
+
+[](#flexbox-properties-and-values)   
+## Flexbox Properties and Values
 
 <details><summary> <code>justify-content</code></summary>
 
-The `justify-content` property aligns flex items along the main axis (horizontal axis by default).
+The `justify-content` property aligns flex items along the main axis (horizontal by default) and takes the following values:
 
-- `flex-start`: Items align to the left side of the container.
-- `flex-end`: Items align to the right side of the container.
+- `flex-start`: Items align to the start (left by default) of the container.
+- `flex-end`: Items align to the end of the container (right by default).
 - `center`: Items align at the center of the container.
 - `space-between`: Items display with equal spacing between them.
 - `space-around`: Items display with equal spacing around them.
 
-</details>
-
-<details open><summary> <code>align-items</code></summary>
-
-Aligns flex items along the cross axis (vertical axis by default).
-
-- `flex-start`
-- `flex-end`
-- `center`
-- `baseline`
-- `stretch`
+Note: `justify-content: flex-start` could right-align items if `flex-direction: row-reverse` has been used previously for the same flex container.
 
 </details>
 
-<details open><summary> <code>flex-direction</code></summary>
+<details><summary> <code>align-items</code></summary>
 
-Defines the direction of the main axis (horizontal by default).
+The `align-items` property aligns items along the cross axis (vertical axis by default) and takes the following values:
 
-- `row`
-- `row-reverse`
-- `column`
-- `column-reverse`
+- `flex-start`: Items align to the start of the container (top by default).
+- `flex-end`: Items align to the end of the container (bottom by default).
+- `center`: Items align to the center of the container (vertical center by default).
+- `baseline`: Items display at the baseline of the container.
+- `stretch`: Items are stretched to fit the container.
 
 </details>
 
-<details open><summary> <code>order</code></summary>
+<details><summary> <code>flex-direction</code></summary>
+
+Defines the direction of the main axis (horizontal by default) or, more simply, the direction in which items are placed in the container.
+
+- `row`: Items are placed the same as the text direction (left to right by default).
+- `row-reverse`: Items are placed opposite to the text direction (i.e., right to left).
+- `column`: Items are placed top to bottom (left to right by default).
+- `column-reverse`: Items are placed bottom to top.
+
+</details>
+
+<details><summary> <code>order</code></summary>
 
 Specifies the order of the flex item. 
 
 - `<integer> (..., -1, 0, 1, ...)` (0 by default)
 
-</details>
-
-<details open><summary> <code>align-self</code></summary>
-
-Aligns a flex item along the cross axis, override the `align-items` value.
-
-- `flex-start`
-- `flex-end`
-- `center`
-- `baseline`
-- `stretch`
+Sometimes simply reversing the row or column order of a container is not enough. In these cases, we can apply the `order` property to individual items. By default, items have a value of 0, but we can use this property to also set it to a positive or negative integer value (..., -2, -1, 0, 1, 2, ...).
 
 </details>
 
-<details open><summary> <code>flex-wrap</code></summary>
+<details><summary> <code>align-self</code></summary>
+
+Aligns an individual or specific flex item (singular) along the cross axis, overriding whatever `align-items` value may exist for this item. Hence, the `align-self` property takes all the same values (and singular effects) that `align-items` does:
+
+- `flex-start`: Specific item aligns to the start of the container (top by default).
+- `flex-end`: Specific item aligns to the end of the container (bottom by default).
+- `center`: Specific item aligns to the center of the container (vertical center by default).
+- `baseline`: Specific item displays at the baseline of the container.
+- `stretch`: Specific item is stretched to fit the container.
+
+</details>
+
+<details><summary> <code>flex-wrap</code></summary>
 
 Specifies whether flex items are forced on a single line or can be wrapped on multiple lines.
 
-- `nowrap`
-- `wrap`
-- `wrap-reverse`
+- `nowrap`: Every item is fit to a single line.
+- `wrap`: Items wrap around to additional lines.
+- `wrap-reverse`: Items wrap around to additional lines in reverse.
 
 </details>
 
-<details open><summary> <code>flex-flow</code></summary>
+<details><summary> <code>flex-flow</code></summary>
 
-Shorthand property for `flex-direction` and `flex-wrap`.
+The two properties `flex-direction` and `flex-wrap` are used so often together that the shorthand property `flex-flow` was created to combine them. This shorthand property accepts the value of one of the two properties separated by a space. For example, you can use `flex-flow: row wrap` to set rows and wrap them. Also, for the previous exercise, instead of using `flex-direction: column` and `flex-wrap: wrap` together, we could have simply used `flex-flow` by itself in the following manner: `flex-flow: column wrap`.
 
-- `<flex-direction> <flex-wrap>`
+More concisely, we see that `flex-flow` is just a shorthand property for `flex-direction` and `flex-wrap`:
 
-</details>
-
-<details open><summary> <code>align-content</code></summary>
-
-Aligns a flex container's lines within the flex container when there is extra space on the cross-axis.
-
-- `flex-start`
-- `flex-end`
-- `center`
-- `space-between`
-- `space-around`
-- `stretch`
+- `flex-flow: <flex-direction> <flex-wrap>`
 
 </details>
 
+<details><summary> <code>align-content</code></summary>
 
+The `align-content` property can be used to set how multiple lines are spaced apart from each other (relevant when there is extra space between items along the cross-axis). This property takes the following values:
 
+- `flex-start`: Lines are packed at the top of the container.
+- `flex-end`: Lines are packed at the bottom of the container.
+- `center`: Lines are packed at the vertical center of the container.
+- `space-between`: Lines display with equal spacing between them.
+- `space-around`: Lines display with equal spacing around them.
+- `stretch`: Lines are stretched to fit the container.
+
+Note that `align-content` determines the spacing between lines while `align-items` determines how the items as a whole are aligned within the container. When there is only one line, `align-content` has no effect.
+
+</details>
+
+[](#contents)
 ## Contents
  
 - [Level 1](#level-1)    
@@ -120,17 +136,17 @@ Aligns a flex container's lines within the flex container when there is extra sp
 
 ## Level 1
 
-Move the frog to the right on top of the lilypad.
+<details><summary> Click here for more explicit directions (i.e., hints)</summary>
 
-<details><summary> Click here for more explicit directions (i.e., a hint).</summary>
-
-TBD
+The following are possible approaches:
+- `justify-content: flex-end`: This will move the frog to the end of the container to the right. 
+- `flex-direction: row-reverse`: This will change the default starting position of the row from left to right.
 
 </details>
 
 <img src="https://user-images.githubusercontent.com/52146855/64952375-2cab8e00-d84e-11e9-9580-d3710b97ddf9.png" width="300" height="300" />
 
-(See [general information](#general-information) for reference.)
+(See the [flexbox properties and values](#flexbox-properties-and-values) for reference.)
 
 ```css
 /* given code */
@@ -154,17 +170,19 @@ TBD
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://user-images.githubusercontent.com/52146855/64953831-e821f180-d851-11e9-8209-1b91030c55ba.png" width="150" height="150" />
 
-Notes: 
-
 </details>
 
 ## Level 2
 
-Help the pictured frogs get to their lilypads.
+<details><summary> Click here for more explicit directions (i.e., hints)</summary>
+
+Recall that `justify-content` will center content along the main axis which is horizontal by default.
+
+</details>
 
 <img src="https://user-images.githubusercontent.com/52146855/64954712-6e3f3780-d854-11e9-88a7-74e0d5ca8a7d.png" width="300" height="300" />
 
-(See [general information](#general-information) for reference.)
+(See the [flexbox properties and values](#flexbox-properties-and-values) for reference.)
 
 ```css
 /* given code */
@@ -188,17 +206,19 @@ Help the pictured frogs get to their lilypads.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://user-images.githubusercontent.com/52146855/64954745-8020da80-d854-11e9-8090-97d06abc3976.png" width="150" height="150" />
 
-Notes: 
-
 </details>
 
 ## Level 3
 
-Move the frog to the right on top of the lilypad.
+<details><summary> Click here for more explicit directions (i.e., hints)</summary>
+
+Recall that `justify-content: space-between` will produce equal spacing *between* items (this essentially means the elements on the outside extremes, or far left and far right, get pushed to the ends of the container) whereas `justify-content: space-around` produces equal spacing *around* the elements (including a sort of "wrapping" effect where side padding is taken into account between the item on the far left and the item on the far right).
+
+</details>
 
 <img src="https://user-images.githubusercontent.com/52146855/64960536-705bc300-d861-11e9-9640-0ac5b54fdae0.png" width="300" height="300" />
 
-(See [general information](#general-information) for reference.)
+(See the [flexbox properties and values](#flexbox-properties-and-values) for reference.)
 
 ```css
 /* given code */
@@ -222,17 +242,19 @@ Move the frog to the right on top of the lilypad.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://user-images.githubusercontent.com/52146855/64960990-81590400-d862-11e9-91dd-d0a6b14274fe.png" width="150" height="150" />
 
-Notes: 
-
 </details>
 
 ## Level 4
 
-Move the frog to the right on top of the lilypad.
+<details><summary> Click here for more explicit directions (i.e., hints)</summary>
+
+Recall that `justify-content: space-between` will produce equal spacing *between* items (this essentially means the elements on the outside extremes, or far left and far right, get pushed to the ends of the container) whereas `justify-content: space-around` produces equal spacing *around* the elements (including a sort of "wrapping" effect where side padding is taken into account between the item on the far left and the item on the far right).
+
+</details>
 
 <img src="https://user-images.githubusercontent.com/52146855/64966965-c20a4a80-d86d-11e9-8bea-ea52de510e48.png" width="300" height="300" />
 
-(See [general information](#general-information) for reference.)
+(See the [flexbox properties and values](#flexbox-properties-and-values) for reference.)
 
 ```css
 /* given code */
@@ -256,17 +278,19 @@ Move the frog to the right on top of the lilypad.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://user-images.githubusercontent.com/52146855/64983752-3acdce80-d88f-11e9-94e5-40966e14624a.png" width="150" height="150" />
 
-Notes: 
-
 </details>
 
 ## Level 5
 
-Move the frog to the right on top of the lilypad.
+<details><summary> Click here for more explicit directions (i.e., hints)</summary>
+
+What does `align-items: flex-end` seek to accomplish?
+
+</details>
 
 <img src="https://user-images.githubusercontent.com/52146855/64967010-cf273980-d86d-11e9-9c04-50a295f68341.png" width="300" height="300" />
 
-(See [general information](#general-information) for reference.)
+(See the [flexbox properties and values](#flexbox-properties-and-values) for reference.)
 
 ```css
 /* given code */
@@ -290,17 +314,19 @@ Move the frog to the right on top of the lilypad.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://user-images.githubusercontent.com/52146855/64983934-a748cd80-d88f-11e9-8ee4-62b28855dba1.png" width="150" height="150" />
 
-Notes: 
-
 </details>
 
 ## Level 6
 
-Move the frog to the right on top of the lilypad.
+<details><summary> Click here for more explicit directions (i.e., hints)</summary>
+
+Is it possible to accomplish the desired effect using `justify-content` and `align-items`?
+
+</details>
 
 <img src="https://user-images.githubusercontent.com/52146855/64967031-db12fb80-d86d-11e9-99ec-0467435acbdb.png" width="300" height="300" />
 
-(See [general information](#general-information) for reference.)
+(See the [flexbox properties and values](#flexbox-properties-and-values) for reference.)
 
 ```css
 /* given code */
@@ -308,7 +334,7 @@ Move the frog to the right on top of the lilypad.
     display: flex;
                                             /* your work here */
                                             /* your work here */
-    /* only use blank line above */
+    /* only use blank lines above */
 }
 ```
 
@@ -328,17 +354,19 @@ Move the frog to the right on top of the lilypad.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://user-images.githubusercontent.com/52146855/64984061-fdb60c00-d88f-11e9-86dc-61007ce90b96.png" width="150" height="150" />
 
-Notes: 
-
 </details>
 
 ## Level 7
 
-Move the frog to the right on top of the lilypad.
+<details><summary> Click here for more explicit directions (i.e., hints)</summary>
+
+Is it possible to accomplish the desired effect using `justify-content` and `align-items`?
+
+</details>
 
 <img src="https://user-images.githubusercontent.com/52146855/64967054-e5cd9080-d86d-11e9-967e-4ab9f2b08e66.png" width="300" height="300" />
 
-(See [general information](#general-information) for reference.)
+(See the [flexbox properties and values](#flexbox-properties-and-values) for reference.)
 
 ```css
 /* given code */
@@ -346,7 +374,7 @@ Move the frog to the right on top of the lilypad.
     display: flex;
                                             /* your work here */
                                             /* your work here */
-    /* only use blank line above */
+    /* only use blank lines above */
 }
 ```
 
@@ -366,17 +394,19 @@ Move the frog to the right on top of the lilypad.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://user-images.githubusercontent.com/52146855/64984411-d0b62900-d890-11e9-8773-d2f9afea9a23.png" width="150" height="150" />
 
-Notes: 
-
 </details>
 
 ## Level 8
 
-Move the frog to the right on top of the lilypad.
+<details><summary> Click here for more explicit directions (i.e., hints)</summary>
+
+Can you use `flex-direction`? What does `flex-direction: row-reverse` try to accomplish?
+
+</details>
 
 <img src="https://user-images.githubusercontent.com/52146855/64967090-f1b95280-d86d-11e9-9697-cfb81ae5f9f5.png" width="300" height="300" />
 
-(See [general information](#general-information) for reference.)
+(See the [flexbox properties and values](#flexbox-properties-and-values) for reference.)
 
 ```css
 /* given code */
@@ -400,17 +430,19 @@ Move the frog to the right on top of the lilypad.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://user-images.githubusercontent.com/52146855/64984722-6356c800-d891-11e9-835c-9a76bb9fba91.png" width="150" height="150" />
 
-Notes: 
-
 </details>
 
 ## Level 9
 
-Move the frog to the right on top of the lilypad.
+<details><summary> Click here for more explicit directions (i.e., hints)</summary>
+
+Can you use `flex-direction`? What does `flex-direction: column` try to accomplish?
+
+</details>
 
 <img src="https://user-images.githubusercontent.com/52146855/64967131-00a00500-d86e-11e9-985f-b1c87db71e41.png" width="300" height="300" />
 
-(See [general information](#general-information) for reference.)
+(See the [flexbox properties and values](#flexbox-properties-and-values) for reference.)
 
 ```css
 /* given code */
@@ -434,17 +466,19 @@ Move the frog to the right on top of the lilypad.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://user-images.githubusercontent.com/52146855/64984862-add84480-d891-11e9-9da0-aba5d0470cd3.png" width="150" height="150" />
 
-Notes: 
-
 </details>
 
 ## Level 10
 
-Move the frog to the right on top of the lilypad.
+<details><summary> Click here for more explicit directions (i.e., hints)</summary>
+
+Is it possible to accomplish the desired effect using `flex-direction` and `justify-content`? Notice that when you set the direction to a reversed row or column, start and end are also reversed.
+
+</details>
 
 <img src="https://user-images.githubusercontent.com/52146855/64967170-0bf33080-d86e-11e9-9302-815fe74e6162.png" width="300" height="300" />
 
-(See [general information](#general-information) for reference.)
+(See the [flexbox properties and values](#flexbox-properties-and-values) for reference.)
 
 ```css
 /* given code */
@@ -452,7 +486,7 @@ Move the frog to the right on top of the lilypad.
     display: flex;
                                             /* your work here */
                                             /* your work here */
-    /* only use blank line above */
+    /* only use blank lines above */
 }
 ```
 
@@ -472,17 +506,19 @@ Move the frog to the right on top of the lilypad.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://user-images.githubusercontent.com/52146855/64985165-4969b500-d892-11e9-9635-75d33653cb0e.png" width="150" height="150" />
 
-Notes: 
-
 </details>
 
 ## Level 11
 
-Move the frog to the right on top of the lilypad.
+<details><summary> Click here for more explicit directions (i.e., hints)</summary>
+
+Can you accomplish the desired effect using `flex-direction` and `justify-content`? Notice that when the flex direction is a column, the main and cross axes switch; that is, `justify-content` changes to the vertical axis and `align-items` to the horizontal axis.
+
+</details>
 
 <img src="https://user-images.githubusercontent.com/52146855/64967194-17def280-d86e-11e9-824d-0c0f0f6bba8e.png" width="300" height="300" />
 
-(See [general information](#general-information) for reference.)
+(See the [flexbox properties and values](#flexbox-properties-and-values) for reference.)
 
 ```css
 /* given code */
@@ -490,7 +526,7 @@ Move the frog to the right on top of the lilypad.
     display: flex;
                                             /* your work here */
                                             /* your work here */
-    /* only use blank line above */
+    /* only use blank lines above */
 }
 ```
 
@@ -510,17 +546,19 @@ Move the frog to the right on top of the lilypad.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://user-images.githubusercontent.com/52146855/64985361-b0876980-d892-11e9-85f2-eb3962ae60bf.png" width="150" height="150" />
 
-Notes: 
-
 </details>
 
 ## Level 12
 
-Move the frog to the right on top of the lilypad.
+<details><summary> Click here for more explicit directions (i.e., hints)</summary>
+
+Can you use `flex-direction` and `justify-content` to accomplish the desired effect?
+
+</details>
 
 <img src="https://user-images.githubusercontent.com/52146855/64967223-22998780-d86e-11e9-9903-aec9a5e33d04.png" width="300" height="300" />
 
-(See [general information](#general-information) for reference.)
+(See the [flexbox properties and values](#flexbox-properties-and-values) for reference.)
 
 ```css
 /* given code */
@@ -528,7 +566,7 @@ Move the frog to the right on top of the lilypad.
     display: flex;
                                             /* your work here */
                                             /* your work here */
-    /* only use blank line above */
+    /* only use blank lines above */
 }
 ```
 
@@ -548,17 +586,19 @@ Move the frog to the right on top of the lilypad.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://user-images.githubusercontent.com/52146855/64985887-e7aa4a80-d893-11e9-9dcc-86d9dbf68ef9.png" width="150" height="150" />
 
-Notes: 
-
 </details>
 
 ## Level 13
 
-Move the frog to the right on top of the lilypad.
+<details><summary> Click here for more explicit directions (i.e., hints)</summary>
+
+Can you use a combination of `flex-direction`, `justify-content`, and `align-items` to accomplish the desired effect?
+
+</details>
 
 <img src="https://user-images.githubusercontent.com/52146855/64967254-2decb300-d86e-11e9-9fb2-befdbf5b2bc0.png" width="300" height="300" />
 
-(See [general information](#general-information) for reference.)
+(See the [flexbox properties and values](#flexbox-properties-and-values) for reference.)
 
 ```css
 /* given code */
@@ -567,7 +607,7 @@ Move the frog to the right on top of the lilypad.
                                             /* your work here */
                                             /* your work here */
                                             /* your work here */
-    /* only use blank line above */
+    /* only use blank lines above */
 }
 ```
 
@@ -590,17 +630,19 @@ Move the frog to the right on top of the lilypad.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://user-images.githubusercontent.com/52146855/64986153-699a7380-d894-11e9-8df7-f926ec20ec41.png" width="150" height="150" />
 
-Notes: 
-
 </details>
 
 ## Level 14
 
-Move the frog to the right on top of the lilypad.
+<details><summary> Click here for more explicit directions (i.e., hints)</summary>
+
+Can you use the `order` property to accomplish the desired effect? Sometimes simply reversing the row or column order of a container is not enough. In these cases, we can apply the `order` property to individual items. By default, items have a value of 0, but we can use this property to also set it to a positive or negative integer value (..., -2, -1, 0, 1, 2, ...).
+
+</details>
 
 <img src="https://user-images.githubusercontent.com/52146855/64967287-380eb180-d86e-11e9-923c-de882ffb78c1.png" width="300" height="300" />
 
-(See [general information](#general-information) for reference.)
+(See the [flexbox properties and values](#flexbox-properties-and-values) for reference.)
 
 ```css
 /* given code */
@@ -630,17 +672,19 @@ Move the frog to the right on top of the lilypad.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://user-images.githubusercontent.com/52146855/64986350-d0b82800-d894-11e9-95b6-9d0322537ff7.png" width="150" height="150" />
 
-Notes: 
-
 </details>
 
 ## Level 15
 
-Move the frog to the right on top of the lilypad.
+<details><summary> Click here for more explicit directions (i.e., hints)</summary>
+
+Can you use the `order` property to accomplish the desired effect (remember that items have a default `order` value of 0)?
+
+</details>
 
 <img src="https://user-images.githubusercontent.com/52146855/64967310-42c94680-d86e-11e9-9d71-4d1cb995c51d.png" width="300" height="300" />
 
-(See [general information](#general-information) for reference.)
+(See the [flexbox properties and values](#flexbox-properties-and-values) for reference.)
 
 ```css
 /* given code */
@@ -670,17 +714,19 @@ Move the frog to the right on top of the lilypad.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://user-images.githubusercontent.com/52146855/64986609-6a7fd500-d895-11e9-8517-243d0d22e460.png" width="150" height="150" />
 
-Notes: 
-
 </details>
 
 ## Level 16
 
-Move the frog to the right on top of the lilypad.
+<details><summary> Click here for more explicit directions (i.e., hints)</summary>
+
+Can you use `align-self` to accomplish the desired effect?
+
+</details>
 
 <img src="https://user-images.githubusercontent.com/52146855/64967327-4e1c7200-d86e-11e9-9183-88259af3e006.png" width="300" height="300" />
 
-(See [general information](#general-information) for reference.)
+(See the [flexbox properties and values](#flexbox-properties-and-values) for reference.)
 
 ```css
 /* given code */
@@ -712,17 +758,19 @@ Move the frog to the right on top of the lilypad.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://user-images.githubusercontent.com/52146855/64986821-dbbf8800-d895-11e9-8494-b05eae4f958e.png" width="150" height="150" />
 
-Notes: 
-
 </details>
 
 ## Level 17
 
-Move the frog to the right on top of the lilypad.
+<details><summary> Click here for more explicit directions (i.e., hints)</summary>
+
+Can you use `order` and `align-self` to accomplish the desired effect?
+
+</details>
 
 <img src="https://user-images.githubusercontent.com/52146855/64967359-596f9d80-d86e-11e9-95f6-8de5db2a3946.png" width="300" height="300" />
 
-(See [general information](#general-information) for reference.)
+(See the [flexbox properties and values](#flexbox-properties-and-values) for reference.)
 
 ```css
 /* given code */
@@ -734,7 +782,7 @@ Move the frog to the right on top of the lilypad.
 .yellow {
                                             /* your work here */
                                             /* your work here */
-    /* only use blank line above */
+    /* only use blank lines above */
 }
 ```
 
@@ -758,17 +806,19 @@ Move the frog to the right on top of the lilypad.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://user-images.githubusercontent.com/52146855/64987883-2c37e500-d898-11e9-8446-92a01a0d45e5.png" width="150" height="150" />
 
-Notes: 
-
 </details>
 
 ## Level 18
 
-Move the frog to the right on top of the lilypad.
+<details><summary> Click here for more explicit directions (i.e., hints)</summary>
+
+Can you use `flex-wrap` to accomplish the desired effect?
+
+</details>
 
 <img src="https://user-images.githubusercontent.com/52146855/64967387-67252300-d86e-11e9-9757-8b5b9a7fe270.png" width="300" height="300" />
 
-(See [general information](#general-information) for reference.)
+(See the [flexbox properties and values](#flexbox-properties-and-values) for reference.)
 
 ```css
 /* given code */
@@ -792,24 +842,27 @@ Move the frog to the right on top of the lilypad.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://user-images.githubusercontent.com/52146855/64988033-8cc72200-d898-11e9-86b5-1d973fb3b7e8.png" width="150" height="150" />
 
-Notes: 
-
 </details>
 
 ## Level 19
 
-Move the frog to the right on top of the lilypad.
+<details><summary> Click here for more explicit directions (i.e., hints)</summary>
+
+Can you use `flex-direction` and `flex-wrap` to accomplish the desired effect? What about being even more concise and using `flex-flow`?
+
+</details>
 
 <img src="https://user-images.githubusercontent.com/52146855/64967436-7d32e380-d86e-11e9-9bff-6cff57baae26.png" width="300" height="300" />
 
-(See [general information](#general-information) for reference.)
+(See the [flexbox properties and values](#flexbox-properties-and-values) for reference.)
 
 ```css
 /* given code */
 #pond {
     display: flex;
                                             /* your work here */
-    /* only use blank line above */
+                                            /* your work here */
+    /* only use blank lines above */
 }
 ```
 
@@ -829,17 +882,21 @@ Move the frog to the right on top of the lilypad.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://user-images.githubusercontent.com/52146855/64988198-e9c2d800-d898-11e9-8fb4-6ab15608eb7e.png" width="150" height="150" />
 
-Notes: 
+Note that we can accomplish the above using `flex-flow`, namely `flex-flow: column wrap`.
 
 </details>
 
 ## Level 20
 
-Move the frog to the right on top of the lilypad.
+<details><summary> Click here for more explicit directions (i.e., hints)</summary>
+
+Can you use the `flex-flow` shorthand property by itself instead of both `flex-direction` and `flex-wrap` to accomplish the desired effect?
+
+</details>
 
 <img src="https://user-images.githubusercontent.com/52146855/64967437-7d32e380-d86e-11e9-9ad9-f5cc923b6064.png" width="300" height="300" />
 
-(See [general information](#general-information) for reference.)
+(See the [flexbox properties and values](#flexbox-properties-and-values) for reference.)
 
 ```css
 /* given code */
@@ -863,17 +920,19 @@ Move the frog to the right on top of the lilypad.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://user-images.githubusercontent.com/52146855/64988381-5938c780-d899-11e9-98d6-081cbe10dea8.png" width="150" height="150" />
 
-Notes: 
-
 </details>
 
 ## Level 21
 
-Move the frog to the right on top of the lilypad.
+<details><summary> Click here for more explicit directions (i.e., hints)</summary>
+
+Can you use `align-content` to accomplish the desired effect?
+
+</details>
 
 <img src="https://user-images.githubusercontent.com/52146855/64968501-4cec4480-d870-11e9-9cbb-91db368da517.png" width="300" height="300" />
 
-(See [general information](#general-information) for reference.)
+(See the [flexbox properties and values](#flexbox-properties-and-values) for reference.)
 
 ```css
 /* given code */
@@ -899,17 +958,19 @@ Move the frog to the right on top of the lilypad.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://user-images.githubusercontent.com/52146855/64988561-b765aa80-d899-11e9-8933-3f9695bdda26.png" width="150" height="150" />
 
-Notes: 
-
 </details>
 
 ## Level 22
 
-Move the frog to the right on top of the lilypad.
+<details><summary> Click here for more explicit directions (i.e., hints)</summary>
+
+Can you use `align-content` to accomplish the desired effect?
+
+</details>
 
 <img src="https://user-images.githubusercontent.com/52146855/64967439-7dcb7a00-d86e-11e9-9a7f-e87d9f926426.png" width="300" height="300" />
 
-(See [general information](#general-information) for reference.)
+(See the [flexbox properties and values](#flexbox-properties-and-values) for reference.)
 
 ```css
 /* given code */
@@ -936,17 +997,19 @@ align-content: flex-end;    /* image 2 */
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://user-images.githubusercontent.com/52146855/64988714-17f4e780-d89a-11e9-9c0b-fec8720946e9.png" width="150" height="150" />
 
-Notes: 
-
 </details>
 
 ## Level 23
 
-Move the frog to the right on top of the lilypad.
+<details><summary> Click here for more explicit directions (i.e., hints)</summary>
+
+Can you use `flex-direction` and `align-content` to accomplish the desired effect?
+
+</details>
 
 <img src="https://user-images.githubusercontent.com/52146855/64967440-7dcb7a00-d86e-11e9-8cb7-b1f3e71e56fc.png" width="300" height="300" />
 
-(See [general information](#general-information) for reference.)
+(See the [flexbox properties and values](#flexbox-properties-and-values) for reference.)
 
 ```css
 /* given code */
@@ -955,7 +1018,7 @@ Move the frog to the right on top of the lilypad.
     flex-wrap: wrap;
                                             /* your work here */
                                             /* your work here */
-    /* only use blank line above */
+    /* only use blank lines above */
 }
 ```
 
@@ -976,17 +1039,29 @@ Move the frog to the right on top of the lilypad.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://user-images.githubusercontent.com/52146855/64988958-8df94e80-d89a-11e9-867e-1f2a5cd3e0f3.png" width="150" height="150" />
 
-Notes: 
-
 </details>
 
 ## Level 24
 
-Move the frog to the right on top of the lilypad.
+<details><summary> Click here for more explicit directions (i.e., hints)</summary>
+
+<details><summary> Hint 1 (somewhat vague)</summary>
+
+Can you use some combination of `flex-direction`, `flex-wrap`, `justify-content`, and `align-content` to accomplish the desired effect (recall that `flex-direction` and `flex-wrap` can be combined into one property with `flex-flow`)? 
+
+</details>
+
+<details><summary> Hint 2 (terribly specific, basically the answer)</summary>
+
+Would `flex-direction: column-reverse` be helpful? What about `flex-wrap: wrap-reverse`? Now it's mostly a matter of having our axes sorted correctly. Would `justify-content: center` help us get the yellow frogs centered vertically? If so, would `align-content: space-between` then help us place the yellow frogs on their lily pads?
+
+</details>
+
+</details>
 
 <img src="https://user-images.githubusercontent.com/52146855/64967441-7dcb7a00-d86e-11e9-9890-b2fdec6d3e5e.png" width="300" height="300" />
 
-(See [general information](#general-information) for reference.)
+(See the [flexbox properties and values](#flexbox-properties-and-values) for reference.)
 
 ```css
 /* given code */
