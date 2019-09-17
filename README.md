@@ -1,5 +1,6 @@
 # Flexbox Froggy
 
+- **Goal:** Always move the frog(s) to the similarly colored lilypad(s).
 - [Contents](#contents): Jump here to go ahead and get started by looking at your desired level. 
 - [Flexbox properties and values](#flexbox-properties-and-values): Jump here to review some of the commonly used properties and values available when using the flexible box model in CSS.
 
@@ -306,7 +307,7 @@ What does `align-items: flex-end` seek to accomplish?
 ```css
 #pond {
     display: flex;              /* image 1 */
-    align-items: flex-end;     /* image 2 */
+    align-items: flex-end;      /* image 2 */
 }
 ```
 
@@ -664,7 +665,7 @@ Can you use the `order` property to accomplish the desired effect? Sometimes sim
 }
 
 .yellow {
-    order: 1;        /* image 2 */
+    order: 1;       /* image 2 */
 }
 ```
 
@@ -706,7 +707,7 @@ Can you use the `order` property to accomplish the desired effect (remember that
 }
 
 .red {
-    order: -1;       /* image 2 */
+    order: -1;      /* image 2 */
 }
 ```
 
