@@ -1,14 +1,19 @@
 # Flexbox Froggy
 
-- **Goal:** Always move the frog(s) to the similarly colored lilypad(s).
-- [Contents](#contents): Jump here to go ahead and get started by looking at your desired level. 
-- [Flexbox properties and values](#flexbox-properties-and-values): Jump here to review some of the commonly used properties and values available when using the flexible box model in CSS.
-
-- **Note:** This "README" file is really a companion to the [levels](#contents) in [flexbox froggy](http://flexboxfroggy.com/), a website dedicated to helping newcomers to the flexible box model in CSS. As loosely stated on the website:
-
+- **Note:** Everything in this document is based off the [Flexbox Froggy](http://flexboxfroggy.com/) game, a website dedicated to helping newcomers to the [flexible box model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) in CSS. As loosely stated on the Flexbox Froggy website:
     > Flexbox Froggy is a game where you help Froggy and friends reach their lilypads by writing CSS code using flexbox!
 
-    Certain properties and values of flexbox have been included below that may be useful to reference throughout completing the exercises if needed. Good luck!
+- **Goal of game:** As noted above, the goal of the game is to always move the frog(s) to their similarly colored lilypad(s).
+
+- **Flexbox:** Jump to the [flexbox properties and values](#flexbox-properties-and-values) section to review some of the commonly used properties and values available when using the flexible box model in CSS.
+
+- **Levels:** Get started by jumping to the [levels](#levels) section to find your desired level.
+
+- **Usage:** For any given level, you are provided with a screen capture of what the beginning of that level looks like.
+    1. **Observe picture:** First take note of the positioning of the frogs from the screen capture--you know your goal is to *always* move the frogs onto their similarly colored lilypads.
+    2. **Given code:** You are given a certain amount of code. Your job is to deduce what *additional* code you need to provide on the allotted lines (marked by `/* your work here */`) to get the frogs to their desired destination.
+    3. **Hints:** Click the `Click here for more explicit direction (i.e., hints)` if you need a nudge in the right direction. What you find will most often be a reference to something you can find in the [flexbox properties and values](#flexbox-properties-and-values) section.
+    4. **Solution:** Underneath the screen capture for each level you may click `Solution` to see one possible solution. You will also see, when relevant, what each line of code does via additional screenshots.
 
 [](#flexbox-properties-and-values)   
 ## Flexbox Properties and Values
@@ -107,8 +112,8 @@ Note that `align-content` determines the spacing between lines while `align-item
 
 </details>
 
-[](#contents)
-## Contents
+[](#levels)
+## Levels
  
 - [Level 1](#level-1)    
 - [Level 2](#level-2)    
